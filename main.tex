@@ -1,0 +1,104 @@
+%% Base on http://tex.stackexchange.com/questions/150900/latex-coding-for-statement-of-purpose
+
+\documentclass[11pt]{article}
+\linespread{1} 
+\usepackage{parskip}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\usepackage[
+  a4paper,
+  margin=0.63in,
+  top=0.8in,
+  bottom=0.8in,
+  headsep=10pt % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+% \usepackage{tgschola}
+\usepackage{lastpage}
+% \usepackage[natbibapa]{apacite}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=green
+}
+\usepackage[sort,numbers]{natbib}
+\renewcommand{\bibsection}{\small \textbf{References \vspace{-10pt}}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\footnotesize Web: \textcolor{purple}{\itshape\yourweb}}
+\lhead{\footnotesize \yourname}
+% \fancyhead[C]{%
+% %   \footnotesize
+%   \yourname\quad
+%   web: \textcolor{blue}{\itshape\yourweb}\quad
+%   \textcolor{blue}{\youremail}}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+
+\fancypagestyle{onlyfooter}{%
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+}
+
+
+\newcommand{\soptitle}{Statement of Purpose}
+
+\newcommand{\yourname}{\textbf{Statement of Purpose}: Aditya Chetan}
+\newcommand{\youremail}{email@address.edu}
+\newcommand{\yourweb}{\url{https://justachetan.github.io/}}
+
+\newcommand{\statement}[1]{\par\medskip
+  \textcolor{black}{\textbf{#1:}}\space
+}
+
+
+% \usepackage[thin]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+% \usepackage{todonotes}
+% \usepackage{noto}
+\usepackage{fontspec}
+ 
+\setmainfont{Times New Roman}
+% \usepackage[
+%   breaklinks,
+%   pdftitle={\yourname - \soptitle},
+%   pdfauthor={\yourname},
+%   unicode
+% ]{hyperref}
+
+
+\begin{document}
+\vspace*{-3.5\baselineskip}
+\thispagestyle{onlyfooter}
+\begin{center}\LARGE\soptitle\\
+\vspace{2pt}
+\large Name \ (Dept. Name Ph.D. applicant for Fall 2022)
+\end{center}
+
+% \hrule
+\vspace{3pt}
+\hrule height 1pt
+
+
+
+% \midskip
+
+
+\textbf{\textit{\underline{Heading 1}}.} 
+
+
+
+\bibliographystyle{acm}
+% \bibliography{sample}
+\noindent
+
+\bibliography{sample}
+
+
+\end{document}
+
